@@ -9,7 +9,7 @@ export default function Home() {
       <div className="mx-auto flex w-full max-w-5xl flex-col items-center gap-12 text-center">
         <div className="flex flex-col items-center gap-5">
           <span className="rounded-full border border-ink/10 bg-white/50 px-4 py-1.5 text-sm tracking-wide text-ink-soft backdrop-blur">
-            打開冰箱，開始找靈感
+            打開冰箱，尋找靈感
           </span>
           <h1 className="text-balance font-display text-5xl font-semibold leading-tight text-ink sm:text-6xl">
             冰箱裡有什麼？
