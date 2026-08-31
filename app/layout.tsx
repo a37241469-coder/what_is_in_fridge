@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { Noto_Sans_TC, Noto_Serif_TC } from "next/font/google";
 import "./globals.css";
 import { FridgeProvider } from "@/context/fridge-context";
+import { Header } from "@/components/header";
+import { Footer } from "@/components/footer";
 
 const notoSansTC = Noto_Sans_TC({
   variable: "--font-noto-sans-tc",
@@ -28,7 +30,11 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
     >
       <body className="app-texture grain relative flex min-h-full flex-col">
         <FridgeProvider>
-          <div className="relative z-10 flex min-h-full flex-1 flex-col">{children}</div>
+          <div className="relative z-10 flex min-h-full flex-1 flex-col">
+            <Header />
+            <div className="flex flex-1 flex-col">{children}</div>
+            <Footer />
+          </div>
         </FridgeProvider>
       </body>
     </html>
