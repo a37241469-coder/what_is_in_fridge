@@ -34,7 +34,7 @@ export default function CartPage() {
     .filter((section) => section.items.length > 0);
 
   return (
-    <div className="mx-auto w-full max-w-3xl px-6 py-12 pb-32">
+    <div className="mx-auto w-full max-w-3xl px-4 py-10 pb-32 sm:px-6 sm:py-12">
       <div className="mb-8">
         <span className="text-sm font-medium text-terracotta-deep">Step 2</span>
         <h1 className="font-display text-3xl font-semibold text-ink sm:text-4xl">你的購物車</h1>

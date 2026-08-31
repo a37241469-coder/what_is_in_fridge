@@ -29,7 +29,7 @@ export function CategoryClient({ categoryId }: { categoryId: string }) {
   const totalInCategory = items.length + customItems.length;
 
   return (
-    <div className="mx-auto w-full max-w-4xl px-6 py-12 pb-32">
+    <div className="mx-auto w-full max-w-4xl px-4 py-10 pb-32 sm:px-6 sm:py-12">
       <Link href="/fridge" className="text-sm text-ink-soft transition hover:text-ink">
         ← 回所有分類
       </Link>

@@ -40,12 +40,12 @@ export function RecipeDetailClient({ id }: { id: string }) {
     : composed!.usedIds.filter((ingredientId) => !selected.has(ingredientId));
 
   return (
-    <div className="mx-auto w-full max-w-3xl px-6 py-12 pb-20">
+    <div className="mx-auto w-full max-w-3xl px-4 py-10 pb-20 sm:px-6 sm:py-12">
       <Link href="/recipes" className="text-sm text-ink-soft transition hover:text-ink">
         ← 回料理列表
       </Link>
 
-      <div className="mt-4 glass-panel-deep rounded-3xl p-6 sm:p-8">
+      <div className="mt-4 glass-panel-deep rounded-3xl p-5 sm:p-8">
         <div className="flex flex-wrap items-center gap-2 text-xs text-ink-soft">
           <span className="rounded-full bg-ink/5 px-2.5 py-1">{difficulty}</span>
           <span className="rounded-full bg-ink/5 px-2.5 py-1">{time}</span>
@@ -68,7 +68,7 @@ export function RecipeDetailClient({ id }: { id: string }) {
           </div>
         )}
 
-        <div className="mt-8 grid gap-8 sm:grid-cols-[1fr_1.4fr]">
+        <div className="mt-8 grid gap-8 md:grid-cols-[1fr_1.4fr]">
           <div>
             <h2 className="font-display text-lg font-semibold text-ink">食材</h2>
             <ul className="mt-3 space-y-2">

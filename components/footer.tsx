@@ -3,9 +3,9 @@ import Link from "next/link";
 export function Footer() {
   return (
     <footer className="border-t border-white/40 bg-cream/70 backdrop-blur-xl">
-      <div className="mx-auto flex w-full max-w-5xl flex-col items-center gap-3 px-6 py-8 text-sm text-ink-soft sm:flex-row sm:justify-between">
+      <div className="mx-auto flex w-full max-w-5xl flex-col items-center gap-3 px-4 py-8 text-center text-sm text-ink-soft sm:flex-row sm:justify-between sm:px-6 sm:text-left">
         <p className="font-display text-ink">冰箱裡有什麼</p>
-        <nav className="flex items-center gap-5">
+        <nav className="flex flex-wrap items-center justify-center gap-x-5 gap-y-2">
           <Link href="/fridge" className="transition hover:text-ink">
             挑食材
           </Link>

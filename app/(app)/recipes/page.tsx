@@ -35,7 +35,7 @@ export default function RecipesPage() {
   const hasAny = curated.length > 0 || composed.length > 0;
 
   return (
-    <div className="mx-auto w-full max-w-5xl px-6 py-12">
+    <div className="mx-auto w-full max-w-5xl px-4 py-10 sm:px-6 sm:py-12">
       <div className="mb-8">
         <span className="text-sm font-medium text-terracotta-deep">Step 3</span>
         <h1 className="font-display text-3xl font-semibold text-ink sm:text-4xl">

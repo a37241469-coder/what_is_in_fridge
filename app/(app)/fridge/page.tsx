@@ -11,7 +11,7 @@ export default function FridgePage() {
   const { selected, custom, hydrated } = useFridge();
 
   return (
-    <div className="mx-auto w-full max-w-5xl px-6 py-12 pb-32">
+    <div className="mx-auto w-full max-w-5xl px-4 py-10 pb-32 sm:px-6 sm:py-12">
       <div className="mb-10 flex flex-col gap-2">
         <span className="text-sm font-medium text-terracotta-deep">Step 1</span>
         <h1 className="font-display text-3xl font-semibold text-ink sm:text-4xl">
