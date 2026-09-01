@@ -19,7 +19,7 @@ export async function POST(request: Request) {
   }
 
   if (!IMAGE_GENERATION_ENABLED) {
-    return NextResponse.json({ error: "圖片生成功能目前暫停" }, { status: 503 });
+    return NextResponse.json({ error: "圖片生成功能目前暫停", keyConfigured: true }, { status: 503 });
   }
 
   const body = await request.json().catch(() => null);
