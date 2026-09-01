@@ -13,13 +13,13 @@ function sanitizeId(id: string) {
 }
 
 export async function POST(request: Request) {
-  if (!IMAGE_GENERATION_ENABLED) {
-    return NextResponse.json({ error: "圖片生成功能目前暫停" }, { status: 503 });
-  }
-
   const apiKey = process.env.GEMINI_API_KEY;
   if (!apiKey) {
     return NextResponse.json({ error: "圖片生成功能尚未設定 API 金鑰" }, { status: 500 });
+  }
+
+  if (!IMAGE_GENERATION_ENABLED) {
+    return NextResponse.json({ error: "圖片生成功能目前暫停" }, { status: 503 });
   }
 
   const body = await request.json().catch(() => null);
