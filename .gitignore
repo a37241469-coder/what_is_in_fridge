@@ -20,6 +20,9 @@
 # production
 /build
 
+# AI-generated recipe images (cached at runtime, not source-controlled)
+/public/generated/
+
 # misc
 .DS_Store
 *.pem

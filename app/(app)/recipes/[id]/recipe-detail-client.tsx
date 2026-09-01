@@ -5,6 +5,7 @@ import { getRecipe } from "@/lib/recipes";
 import { composeRecipeFromId, decodeComposedId } from "@/lib/compose";
 import { resolveIngredient } from "@/lib/ingredients";
 import { useFridge } from "@/context/fridge-context";
+import { RecipeImage } from "@/components/recipe-image";
 
 export function RecipeDetailClient({ id }: { id: string }) {
   const { selected, custom } = useFridge();
@@ -97,6 +98,7 @@ export function RecipeDetailClient({ id }: { id: string }) {
 
           <div>
             <h2 className="font-display text-lg font-semibold text-ink">做法</h2>
+            <RecipeImage recipeId={id} name={name} tagline={tagline} />
             <ol className="mt-3 space-y-4">
               {steps.map((step, i) => (
                 <li key={i} className="flex gap-3 text-sm leading-6 text-ink">
