@@ -72,8 +72,14 @@ export async function POST(request: Request) {
     return NextResponse.json({ error: "圖片生成失敗，請稍後再試" }, { status: 502 });
   }
 
-  await fs.mkdir(CACHE_DIR, { recursive: true });
-  await fs.writeFile(filePath, Buffer.from(base64, "base64"));
-
-  return NextResponse.json({ url: publicUrl, cached: false });
+  try {
+    await fs.mkdir(CACHE_DIR, { recursive: true });
+    await fs.writeFile(filePath, Buffer.from(base64, "base64"));
+    return NextResponse.json({ url: publicUrl, cached: false });
+  } catch (err) {
+    // Read-only filesystem (e.g. Vercel's serverless functions) — skip the
+    // on-disk cache and hand the image straight to the client instead.
+    console.error("Recipe image cache write failed, serving inline", err);
+    return NextResponse.json({ url: `data:image/png;base64,${base64}`, cached: false });
+  }
 }
